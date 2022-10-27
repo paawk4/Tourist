@@ -17,7 +17,8 @@
         <Grid Background="#bae3e8" Panel.ZIndex="-2"/>
         <Grid Grid.Row="2" Background="#445c93"/>
         <Frame ContentRendered="MainFrame_ContentRendered"  Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden"/>
-        <Button Content="Back" Name="BtnBack" Width="175" Height="30" HorizontalAlignment="Right" Margin="5" Click="BtnBack_Click"/>
-        <!--14 min--> 
+        <Button Content="Back" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click"/>
+        
+        
     </Grid>
 </Window>
