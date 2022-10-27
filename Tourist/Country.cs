@@ -17,13 +17,13 @@ namespace Tourist
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Country()
         {
-            this.Hotels = new HashSet<Hotel>();
+            this.Hotel = new HashSet<Hotel>();
         }
     
         public int Code { get; set; }
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Hotel> Hotels { get; set; }
+        public virtual ICollection<Hotel> Hotel { get; set; }
     }
 }

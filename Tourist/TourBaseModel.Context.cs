@@ -13,37 +13,35 @@ namespace Tourist
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ToursBaseEntities : DbContext
+    public partial class Entities : DbContext
     {
 
-        private static ToursBaseEntities _context;
-        public ToursBaseEntities()
-            : base("name=ToursBaseEntities")
+        private static Entities _instance;
+        public Entities()
+            : base("name=Entities")
         {
         }
 
-        public static ToursBaseEntities GetContext()
+        public static Entities Instance()
         {
-            if (_context == null)
+            if( _instance == null)
             {
-                _context = new ToursBaseEntities();
+                _instance = new Entities();
             }
-
-            return _context;
+            return _instance;
         }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Country> Countries { get; set; }
-        public virtual DbSet<Hotel> Hotels { get; set; }
-        public virtual DbSet<HotelComment> HotelComments { get; set; }
-        public virtual DbSet<HotelImage> HotelImages { get; set; }
-        public virtual DbSet<HotelOfTour> HotelOfTours { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<Tour> Tours { get; set; }
-        public virtual DbSet<Type> Types { get; set; }
+        public virtual DbSet<Country> Country { get; set; }
+        public virtual DbSet<Hotel> Hotel { get; set; }
+        public virtual DbSet<HotelComment> HotelComment { get; set; }
+        public virtual DbSet<HotelImage> HotelImage { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Tour> Tour { get; set; }
+        public virtual DbSet<Type> Type { get; set; }
     }
 }

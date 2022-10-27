@@ -17,19 +17,19 @@ namespace Tourist
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tour()
         {
-            this.HotelOfTours = new HashSet<HotelOfTour>();
+            this.Hotel = new HashSet<Hotel>();
         }
     
         public int id { get; set; }
-        public Nullable<int> TickectsCount { get; set; }
+        public int TickectsCount { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public byte[] ImagePreview { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public Nullable<bool> isActual { get; set; }
+        public decimal Price { get; set; }
+        public bool isActual { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HotelOfTour> HotelOfTours { get; set; }
-        public virtual Type Type { get; set; }
+        public virtual ICollection<Hotel> Hotel { get; set; }
+        public virtual ICollection<Type> Type { get; set; }
     }
 }

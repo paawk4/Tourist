@@ -12,12 +12,12 @@ namespace Tourist
     using System;
     using System.Collections.Generic;
     
-    public partial class HotelOfTour
+    public partial class sysdiagrams
     {
-        public int HotelId { get; set; }
-        public Nullable<int> TourId { get; set; }
-    
-        public virtual Hotel Hotel { get; set; }
-        public virtual Tour Tour { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace Tourist
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Type()
         {
-            this.Tours = new HashSet<Tour>();
+            this.Tour = new HashSet<Tour>();
         }
     
         public int Id { get; set; }
@@ -25,6 +25,6 @@ namespace Tourist
         public string Desctiption { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tour> Tours { get; set; }
+        public virtual ICollection<Tour> Tour { get; set; }
     }
 }
