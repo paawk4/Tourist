@@ -5,11 +5,33 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <Style TargetType="Button">
-            
+
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Width" Value="175"/>
             <Setter Property="Height" Value="30"/>
-            <Setter Property="Background" Value="#fac716"/>
+            <Setter Property="Background" Value="#6CC3C5"/>
+
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="White"/>
+
+        </Style>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#6CC3C5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+        <Style TargetType="DataGridRowHeader">
+            <Setter Property="Background" Value="#6CC3C5"/>
+        </Style>
+        <Style TargetType="DataGridRow">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
         </Style>
     </Application.Resources>
 </Application>

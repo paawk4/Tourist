@@ -16,7 +16,6 @@ namespace Tourist
     public partial class ToursBaseEntities : DbContext
     {
         private static ToursBaseEntities _context;
-
         public ToursBaseEntities()
             : base("name=ToursBaseEntities")
         {
@@ -24,10 +23,11 @@ namespace Tourist
     
         public static ToursBaseEntities GetContext()
         {
-            if( _context == null)
+            if(_context == null)
             {
                 _context = new ToursBaseEntities();
             }
+            
             return _context;
         }
 
