@@ -13,9 +13,9 @@
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Image Source="/Resources/logo.jpg" HorizontalAlignment="Left"/>
-        <TextBlock x:Name="HeaderTitle" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Height="46"><Run Text="Туроператоры"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-        <Grid Background="#222222" Panel.ZIndex="-2"/>
-        <Grid Grid.Row="2" Background="#73CED0"/>
+        <TextBlock x:Name="HeaderTitle" Foreground="#FF807C7C" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Height="46"><Run Text="Туроператоры"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+        <Grid Background="#eae5e0" Panel.ZIndex="-2"/>
+        <Grid Grid.Row="2" Background="#4e4465"/>
         <Frame ContentRendered="MainFrame_ContentRendered"  Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden"/>
         <Button Content="Back" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click"/>
 
