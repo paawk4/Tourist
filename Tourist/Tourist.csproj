@@ -65,44 +65,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Country.cs">
-      <DependentUpon>TourBaseModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Hotel.cs">
-      <DependentUpon>TourBaseModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="HotelComment.cs">
-      <DependentUpon>TourBaseModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="HotelImage.cs">
-      <DependentUpon>TourBaseModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>TourBaseModel.tt</DependentUpon>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Tour.cs">
-      <DependentUpon>TourBaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TourBaseModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TourBaseModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TourBaseModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TourBaseModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TourBaseModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TourBaseModel.edmx</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ToursPage.xaml.cs">
       <DependentUpon>ToursPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Type.cs">
-      <DependentUpon>TourBaseModel.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -154,17 +154,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="BaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BaseModel.edmx.diagram">
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <EntityDeploy Include="TourBaseModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TourBaseModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="TourBaseModel.edmx.diagram">
-      <DependentUpon>TourBaseModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -180,15 +180,15 @@
     <Resource Include="Resources\picture.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TourBaseModel.Context.tt">
+    <Content Include="BaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TourBaseModel.edmx</DependentUpon>
-      <LastGenOutput>TourBaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+      <LastGenOutput>BaseModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="TourBaseModel.tt">
+    <Content Include="BaseModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TourBaseModel.edmx</DependentUpon>
-      <LastGenOutput>TourBaseModel.cs</LastGenOutput>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+      <LastGenOutput>BaseModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

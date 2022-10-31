@@ -17,20 +17,22 @@ namespace Tourist
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Hotel()
         {
-            this.HotelComment = new HashSet<HotelComment>();
-            this.HotelImage = new HashSet<HotelImage>();
+            this.HotelComments = new HashSet<HotelComment>();
+            this.HotelImages = new HashSet<HotelImage>();
+            this.Tours = new HashSet<Tour>();
         }
     
         public int Id { get; set; }
         public string Name { get; set; }
         public int CountOfStars { get; set; }
-        public int CountryCode { get; set; }
+        public string CountryCode { get; set; }
     
         public virtual Country Country { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HotelComment> HotelComment { get; set; }
+        public virtual ICollection<HotelComment> HotelComments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HotelImage> HotelImage { get; set; }
-        public virtual Tour Tour { get; set; }
+        public virtual ICollection<HotelImage> HotelImages { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tour> Tours { get; set; }
     }
 }

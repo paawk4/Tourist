@@ -40,11 +40,11 @@ namespace Tourist
             {
                 try
                 {
-                    Entities.Instance().Hotel.RemoveRange(hotelsForRemoving);
-                    Entities.Instance().SaveChanges();
+                    ToursBaseEntities.GetContext().Hotels.RemoveRange(hotelsForRemoving);
+                    ToursBaseEntities.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены");
 
-                    DGridHotels.ItemsSource = Entities.Instance().Hotel.ToList();
+                    DGridHotels.ItemsSource = ToursBaseEntities.GetContext().Hotels.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -57,14 +57,19 @@ namespace Tourist
         {
             if(Visibility == Visibility.Visible)
             {
-                Entities.Instance().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DGridHotels.ItemsSource = Entities.Instance().Hotel.ToList();
+                ToursBaseEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                DGridHotels.ItemsSource = ToursBaseEntities.GetContext().Hotels.ToList();
             }
         }
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Hotel));
+        }
+
+        private void BtnTours_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new ToursPage());
         }
     }
 }

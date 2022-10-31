@@ -32,7 +32,7 @@ namespace Tourist
             }
 
             DataContext = _currentHotel;
-            ComboCountries.ItemsSource = Entities.Instance().Country.ToList();
+            ComboCountries.ItemsSource = ToursBaseEntities.GetContext().Countries.ToList();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
@@ -54,12 +54,12 @@ namespace Tourist
 
             if(_currentHotel.Id == 0)
             {
-                Entities.Instance().Hotel.Add(_currentHotel);
+                ToursBaseEntities.GetContext().Hotels.Add(_currentHotel);
             }
 
             try
             {
-                Entities.Instance().SaveChanges();
+                ToursBaseEntities.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!");
                 Manager.MainFrame.GoBack();
             }
